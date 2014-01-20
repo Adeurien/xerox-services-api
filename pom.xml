@@ -5,10 +5,33 @@
     <groupId>com.xerox</groupId>
     <artifactId>xeroxservicesapi</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>bundle</packaging>
-
+    <packaging>jar</packaging>
     <name>Xerox Services API</name>
-
+    
+    <description>
+        Set of interfaces needed for any prediction system based on the XRCE Learning Framework.
+        Currently used on the Fusepool Stanbol platform.
+    </description>
+    
+    <url>http://www.fusepool.eu/</url>
+    
+    <licenses>
+        <license>
+            <name>Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+    
+    <scm>
+        <url>https://github.com/Adeurien/xerox-services-api</url>
+    </scm>
+    <developers>
+        <developer>
+            <name>Adrien Czerny</name>
+        </developer>
+    </developers>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -38,30 +61,5 @@
             <type>jar</type>
         </dependency>
     </dependencies>
-
-  <build>
-    <!-- make it an OSGi bundle -->
-    <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-scr-plugin</artifactId>
-        <version>1.9.0</version>
-        <executions>
-          <execution>
-            <id>generate-scr-scrdescriptor</id>
-            <goals>
-              <goal>scr</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <extensions>true</extensions>
-        <version>2.3.7</version>
-      </plugin>
-    </plugins>
-  </build>
 
 </project>
